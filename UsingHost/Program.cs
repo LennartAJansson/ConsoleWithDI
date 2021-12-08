@@ -13,4 +13,5 @@ await host.StopAsync(); //Behövs egentligen inte eftersom vi inte använder hos
 static IHostBuilder CreateHostBuilder(string[] args) =>
     Host.CreateDefaultBuilder(args)
         .ConfigureServices(services => services
-            .AddTransient<IExecutor, Executor>());
+            .AddTransient<IExecutor, Executor>()
+            .AddTransient<ISubExecutor, SubExecutor>());

@@ -11,6 +11,7 @@ static IServiceProvider CreateServiceProvider(string[] args) =>
         .AddSingleton<IConfiguration>(services => CreateConfiguration(args))
         .AddLogging(builder => builder.AddConsole().AddConfiguration())
         .AddTransient<IExecutor, Executor>()
+        .AddTransient<ISubExecutor, SubExecutor>()
         .BuildServiceProvider();
 
 static IConfiguration CreateConfiguration(string[] args) =>
