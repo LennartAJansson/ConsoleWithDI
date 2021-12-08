@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-internal class Executor : IExecutor
+﻿internal class Executor : IExecutor
 {
     private readonly ILogger<Executor> logger;
 
